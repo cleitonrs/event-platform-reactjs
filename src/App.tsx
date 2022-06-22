@@ -35,7 +35,7 @@ function App() {
         {theme === 'dark' ? <FaMoon className="w-full h-full text-white"></FaMoon>  : <FaSun className="w-full h-full text-white"></FaSun>}
         
       </button>
-      <div className="bg:white dark:bg-slate-900 p-10">
+      <div className="bg:white dark:bg-slate-900">
         <Event />
       </div>
     </>
