@@ -1,31 +1,44 @@
-import { gql, useQuery } from "@apollo/client"
-
-
-
-const GET_LESSONS_QUERY = gql`
-  query {
-    lessons {
-      id
-      title
-    }
-  }
-`
-interface Lesson {
-  id: string
-  title: string
-}
+import { useEffect, useState } from "react"
+import Event from "./pages/Event"
+import { FaSun, FaMoon } from 'react-icons/fa'
 
 function App() {
-  const { data } = useQuery<{ lessons: Lesson[] }>(GET_LESSONS_QUERY) 
+  const [theme, setTheme] = useState('')
 
-  console.log(data)
+  useEffect(() => {
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setTheme('dark')
+    }else {
+      setTheme('light')
+    }
+  }, [])
+
+  useEffect(() => {
+    if(theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    }else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [theme])
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   return (
-    <ul>
-      {data?.lessons.map(lesson => {
-        return <li key={lesson.id}>{lesson.title}</li>
-      })}
-    </ul>
+    <>
+      <button
+       type="button"
+       onClick={handleThemeSwitch}
+       className="fixed z-10 right-2 top-2 bg-slate-500 text-lg p-2 rounded-full  " 
+      >
+        {theme === 'dark' ? <FaMoon className="w-full h-full text-white"></FaMoon>  : <FaSun className="w-full h-full text-white"></FaSun>}
+        
+      </button>
+      <div className="bg:white dark:bg-slate-900 p-10">
+        <Event />
+      </div>
+    </>
   )
 }
 
