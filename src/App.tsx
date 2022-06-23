@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
-import Event from "./pages/Event"
 import { FaSun, FaMoon } from 'react-icons/fa'
+import Router from "./Router"
+import { ApolloProvider } from "@apollo/client"
+import { client } from "./lib/apollo"
+import { BrowserRouter } from "react-router-dom"
 
 function App() {
   const [theme, setTheme] = useState('')
@@ -36,7 +39,11 @@ function App() {
         
       </button>
       <div className="bg:white dark:bg-slate-900">
-        <Event />
+        <ApolloProvider client={client}>
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
+        </ApolloProvider>
       </div>
     </>
   )
