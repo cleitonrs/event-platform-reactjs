@@ -29,8 +29,8 @@ const Sidebar = () => {
   const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
 
   return (
-    <aside className="w-[348px] bg-gray-600 dark:bg-gray-700 text-gray-100 p-6 border-l dark:border-gray-600">
-      <span className="font-bold text-2xl pb-6 mb-6 border-b dark:border-gray-500 block">
+    <aside className="w-[348px] bg-gray-500 dark:bg-gray-700 text-gray-100 p-6 border-l dark:border-gray-600">
+      <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-300 dark:border-gray-500 block">
         Cronograma de aulas
       </span>
 
