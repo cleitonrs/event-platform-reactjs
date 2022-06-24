@@ -44,7 +44,7 @@ const Video = (props: VideoProps) => {
 
   if (!data) {
     return (
-      <div className="flex-1">
+      <div className="flex-1 dark:bg-black">
         <p>Carregando...</p>
       </div>
     )
