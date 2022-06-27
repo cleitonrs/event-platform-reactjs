@@ -35,7 +35,7 @@ const Lesson = (props: LessonProps) => {
                 Conteúdo liberado
               </span>
           ) : (
-            <span className="text-sm text-cyan-400 text-orange-400 dark:text-orange-500 font-medium flex items-center gap-2">
+            <span className="text-sm text-orange-400 dark:text-orange-500 font-medium flex items-center gap-2">
             <Lock size={20}/>
             Em breve
           </span>

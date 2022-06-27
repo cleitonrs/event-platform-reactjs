@@ -33,7 +33,7 @@ function App() {
       <button
        type="button"
        onClick={handleThemeSwitch}
-       className="fixed z-10 right-2 top-2 bg-slate-500 text-lg p-2 rounded-full  " 
+       className="fixed z-10 right-20 top-3 bg-slate-500 text-lg p-2 rounded-full  " 
       >
         {theme === 'dark' ? <FaMoon className="w-full h-full text-white"></FaMoon>  : <FaSun className="w-full h-full text-white"></FaSun>}
         

@@ -17,7 +17,7 @@ const Video = (props: VideoProps) => {
 
   if (!data || !data.lesson) {
     return (
-      <div className="flex flex-1 justify-center dark:bg-black">
+      <div className="flex flex-1 justify-center items-center dark:bg-black">
         <p>Carregando...</p>
       </div>
     )
@@ -74,16 +74,16 @@ const Video = (props: VideoProps) => {
             </a>
           </div>
         </div>
-        <div className="gap-8 mt-20 grid grid-cols-1 md:grid-cols-2 text-xs">
-          <a href="" className="bg-gray-400 dark:bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+        <div className="gap-8 mt-20 grid grid-cols-1 md:grid-cols-2">
+          <a href="" className="bg-gray-400 dark:bg-gray-700 rounded overflow-hidden flex items-stretch gap-2 md:gap-6 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
             <div className="bg-green-500 dark:bg-green-700 h-full p-6 flex items-center">
               <FileArrowDown size={40} />
             </div>
             <div className="py-6 leading-relaxed">
-              <strong className="text-2xl">
+              <strong className="md:text-2xl text-1xl">
                 Material complementar
               </strong>
-              <p className="text-sm text-gray-700 dark:text-gray-200 mt-2">
+              <p className="md:text-sm text-xs text-gray-700 dark:text-gray-200 mt-2">
                 Acesse o material complementar para acelerar o seu desenvolvimento.
               </p>
             </div>
@@ -97,10 +97,10 @@ const Video = (props: VideoProps) => {
               <Image size={40} />
             </div>
             <div className="py-6 leading-relaxed">
-              <strong className="text-2xl">
+              <strong className="md:text-2xl text-1xl">
                 Wallpapers exclusivos
               </strong>
-              <p className="text-sm text-gray-700 dark:text-gray-200 mt-2">
+              <p className="md:text-sm text-xs text-gray-700 dark:text-gray-200 mt-2">
                 Baixe wallpapers exclusivos do Ignite Lab e personalize sua máquina.
               </p>
             </div>

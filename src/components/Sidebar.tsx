@@ -1,12 +1,15 @@
 import { useGetLessonsQuery } from "../graphql/generated"
 import Lesson from "./Lesson"
 
+interface SidebarProps {
+  open: boolean
+}
 
-const Sidebar = () => {
+const Sidebar = ({ open }: SidebarProps) => {
   const { data } = useGetLessonsQuery()
 
   return (
-    <aside className="w-[348px] bg-gray-500 dark:bg-gray-700 text-gray-100 p-6 border-l dark:border-gray-600 md:block">
+    <aside className={`w-full h-full absolute overflow-y-auto z-50 ${open ? '' : 'hidden'} md:w-[348px] bg-gray-500 dark:bg-gray-700 text-gray-100 p-6 border-l dark:border-gray-600 md:relative md:h-auto md:block`}>
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-300 dark:border-gray-500 block">
         Cronograma de aulas
       </span>
