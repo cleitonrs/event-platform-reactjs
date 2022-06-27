@@ -75,7 +75,7 @@ const Video = (props: VideoProps) => {
           </div>
         </div>
         <div className="gap-8 mt-20 grid grid-cols-1 md:grid-cols-2">
-          <a href="" className="bg-gray-400 dark:bg-gray-700 rounded overflow-hidden flex items-stretch gap-2 md:gap-6 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+          <a href="" className="bg-gray-400 dark:bg-gray-700 rounded overflow-hidden flex items-stretch gap-2 md:gap-6 hover:bg-gray-200 dark:hover:bg-gray-600 hover:-translate-y-2 transform transition-colors">
             <div className="bg-green-500 dark:bg-green-700 h-full p-6 flex items-center">
               <FileArrowDown size={40} />
             </div>
@@ -92,7 +92,7 @@ const Video = (props: VideoProps) => {
             </div>
           </a>
           
-          <a href="" className="bg-gray-400 dark:bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+          <a href="" className="bg-gray-400 dark:bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-200 dark:hover:bg-gray-600 hover:-translate-y-2 transform transition-colors">
             <div className="bg-green-500 dark:bg-green-700 h-full p-6 flex items-center">
               <Image size={40} />
             </div>
