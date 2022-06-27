@@ -1,16 +1,8 @@
-import { gql, useMutation } from "@apollo/client"
 import { useState, FormEvent } from "react"
 import { useNavigate } from "react-router-dom"
 import Logo from "../components/Logo"
 import codeMockup from "../assets/codeMockup.png"
-
-const CREATE_SUBSCRIBER_MUTATION =gql`
-  mutation CreateSubscriber ($name: String!, $email: String!) {
-    createSubscriber(data: {name: $name, email: $email}) {
-      id
-  }
-}
-`
+import { useCreateSubscriberMutation } from "../graphql/generated"
 
 
 const Subscribe = () => {
@@ -20,7 +12,7 @@ const Subscribe = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
 
-  const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION)
+  const [createSubscriber, { loading }] = useCreateSubscriberMutation()
 
   async function handleSubscribe(event: FormEvent) {
     event.preventDefault()
