@@ -31,8 +31,10 @@ const Subscribe = () => {
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
       <div className="w-full max-w-xs md:max-w-[1100px] flex flex-col md:flex-row items-center justify-center md:justify-between mt-20 mx-auto">
         <div className="max-w-xs md:max-w-[640px] text-center md:text-left">
-          <Logo />
-          <h1 className="mt-8 text-[2.2rem] md:text-[] leading-tight text-black dark:text-gray-100">
+          <div className="flex justify-center md:justify-start">
+            <Logo />
+          </div>
+          <h1 className="mt-8 text-[2.2rem] md:text-[2.5rem] leading-tight text-black dark:text-gray-100">
             Construa uma <strong className="text-cyan-400 dark:text-blue-500">aplicação completa,</strong> do zero, com <strong className="text-cyan-400 dark:text-blue-500">React</strong>
           </h1>
           <p className="m-5 md:m-0 md:mt-4 text-black dark:text-gray-200 leading-relaxed">
