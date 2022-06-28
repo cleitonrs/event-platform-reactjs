@@ -31,4 +31,4 @@ https://ignite-lab-react-snowy.vercel.app/
 - Vite
 - Graphql
 - Graphcms
-- Apollo
+- ApolloClient
